@@ -19,7 +19,7 @@ function Signup() {
 
     const handleClick=async()=>{
         console.log(name,email,password);
-        let result=await fetch('http://localhost:8000/api/register',{
+        let result=await fetch('https://imdbclone-production.up.railway.app/api/register',{
             method:'Post',
             body: JSON.stringify({name,email,password}),
             headers:{

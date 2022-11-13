@@ -21,7 +21,7 @@ function UpdateMovie() {
   const navigate=useNavigate();
 
   const getAllCategories = () => {
-    return fetch("http://localhost:8000/api/categories", {
+    return fetch("https://imdbclone-production.up.railway.app/api/categories", {
       method: "GET"
     })
       .then(response => {
@@ -40,7 +40,7 @@ function UpdateMovie() {
 
   const getMovieDetails = async () => {
     
-    let result = await fetch(`http://localhost:8000/api/movie/${params.id}`)
+    let result = await fetch(`https://imdbclone-production.up.railway.app/api/movie/${params.id}`)
     
     result = await result.json();
     console.log("result",result);
@@ -70,7 +70,7 @@ function UpdateMovie() {
   };
 
   const updateMovie=async()=>{
-    let result=await fetch(`http://localhost:8000/api/movie/${params.id}`,{
+    let result=await fetch(`https://imdbclone-production.up.railway.app/api/movie/${params.id}`,{
       method:'Put',
       body:JSON.stringify({name ,description ,photo ,categories ,formData ,release ,duration}),
       headers:{

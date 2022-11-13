@@ -27,7 +27,7 @@ function Addmovie() {
     
 
     const getAllCategories = () => {
-        return fetch("http://localhost:8000/api/categories", {
+        return fetch("https://imdbclone-production.up.railway.app/api/categories", {
           method: "GET" 
         })
         .then(response => {

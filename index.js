@@ -26,7 +26,8 @@ app.get('/',(req,res)=>{
     res.send("Success")
 })
 
+const port = process.env.PORT;
 
-app.listen(8000,(req,res)=>{
-    console.log("Connected");
+app.listen(port,(req,res)=>{
+    console.log(`Connected at ${port}`);
 })

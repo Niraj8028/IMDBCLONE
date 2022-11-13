@@ -9,7 +9,7 @@ function Home() {
     const [movies, setMovies] = useState([])
 
     const getAllMovies = async () => {
-        return fetch("http://localhost:8000/api/movies", {
+        return fetch("https://imdbclone-production.up.railway.app/api/movies", {
             method: 'Get'
         }).then(Response => {
             return Response.json();

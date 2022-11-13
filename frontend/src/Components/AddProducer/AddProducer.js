@@ -10,7 +10,7 @@ function AddProducer() {
     const handleClick = async () => {
         console.log({ name, gender, age, bio });
         
-        let result = await fetch('http://localhost:8000/api/add/producer', {
+        let result = await fetch('https://imdbclone-production.up.railway.app/api/add/producer', {
             method: 'post',
             body: JSON.stringify({ name, gender, age, bio }),
             headers: {

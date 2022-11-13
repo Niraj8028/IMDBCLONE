@@ -12,7 +12,7 @@ export const isAuthenticated = () => {
 };
 
 export const addMovie = (movie) => {
-    return fetch("http://localhost:8000/api/movie/create", {
+    return fetch("https://imdbclone-production.up.railway.app/api/movie/create", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -28,7 +28,7 @@ export const addMovie = (movie) => {
 
 
   export const updateMovie = (id, movie) => {
-    return fetch(`http://localhost:8000/api/movie/${id}`, {
+    return fetch(`https://imdbclone-production.up.railway.app/api/movie/${id}`, {
       method: "PUT",
       headers: {
         Accept: "application/json",

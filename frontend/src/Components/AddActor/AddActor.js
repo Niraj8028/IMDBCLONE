@@ -9,7 +9,7 @@ function AddActor() {
     const handleClick = async () => {
         console.log({ name, gender, age, bio });
         
-        let result = await fetch('http://localhost:8000/api/add/actor', {
+        let result = await fetch('https://imdbclone-production.up.railway.app/api/add/actor', {
             method: 'post',
             body: JSON.stringify({ name, gender, age, bio }),
             headers: {

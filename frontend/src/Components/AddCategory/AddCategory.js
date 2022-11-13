@@ -6,7 +6,7 @@ function AddCategory() {
     const handleClick = async () => {
         console.log({ name });
         
-        let result = await fetch('http://localhost:8000/api/category/create', {
+        let result = await fetch('https://imdbclone-production.up.railway.app/api/category/create', {
             method: 'post',
             body: JSON.stringify({name}),
             headers: {

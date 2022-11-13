@@ -18,7 +18,7 @@ function Login() {
 
   const handleclick=async()=>{
     console.log({email,password});
-    let result=await fetch('http://localhost:8000/api/login',{
+    let result=await fetch('https://imdbclone-production.up.railway.app/api/login',{
       method:'POST',
       body:JSON.stringify({email,password}),
       headers:{

@@ -13,7 +13,7 @@ function MovieList() {
     }, [])
 
     const getAllMovies = async () => {
-        let result = await fetch(`http://localhost:8000/api/movies`)
+        let result = await fetch(`https://imdbclone-production.up.railway.app/api/movies`)
         result = await result.json();
         setMovies(result)
         console.log(result)
@@ -21,7 +21,7 @@ function MovieList() {
     }
     const deleteMovie = async (id) => {
         console.log(id)
-        let result = await fetch(`http://localhost:8000/api/movie/${id}`, {
+        let result = await fetch(`https://imdbclone-production.up.railway.app/api/movie/${id}`, {
             method: 'delete'
         })
         result = await result.json();
@@ -30,7 +30,7 @@ function MovieList() {
     const handleSearch = async (e) => {
         let key = e.target.value;
         if (key) {
-            let result = await fetch(`http://localhost:8000/api/search/${key}`)
+            let result = await fetch(`https://imdbclone-production.up.railway.app/api/search/${key}`)
             result = await result.json();
             if (result) {
                 setMovies(result)
