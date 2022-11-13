@@ -8,13 +8,14 @@ const movieRoutes=require('./Routes/Movie')
 const actorRoutes=require('./Routes/actor')
 const producerRoutes=require("./Routes/producer")
 const categoryRoutes=require("./Routes/category")
+require('dotenv').config()
 
 const app=express();
 app.use(express.json());
 app.use(cors())
+console.log(process.env.DATABASE)
 
-mongoose.connect('mongodb://localhost:27017/IMDB')
-
+mongoose.connect(process.env.DATABASE)
 app.use('/api',authRoutes)
 app.use('/api',movieRoutes)
 app.use('/api',categoryRoutes)
