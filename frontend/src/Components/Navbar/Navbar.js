@@ -28,7 +28,7 @@ function Navbar() {
             </div>
             <div className='headerRight'>
                  
-                {!auth && (<div><Link to="/login">Login</Link>
+                {!auth && (<div><Link to="/login">Admin</Link>
                     <Link to="/signup">Signup</Link>
                 </div>)}
                 {auth && (<Link onClick={logout} to="/signup">Logout</Link>)}
