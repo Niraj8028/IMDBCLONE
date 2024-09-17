@@ -15,12 +15,9 @@ function AddActor() {
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
-        
+        })    
         result = await result.json();
         console.log("result:", result)
-        
-
     }
 
     return (
